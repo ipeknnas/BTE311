@@ -1,6 +1,65 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid/Flex Yapısı</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            gap: 15px;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
 
+        .item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 1.5em;
+            height: 150px;
+        }
+
+        .itemA { background-color: #b4c6ec; grid-column: span 3; height: 100px; }
+        .itemB { background-color: #e6cd9d; }
+        .itemC { background-color: #b0e7a5; }
+        .itemD { background-color: #d09ae8; }
+        .itemE { background-color: #8ae9f5; grid-column: span 2; }
+        .itemF { background-color: #b99be0; }
+        .itemG { background-color: #a6e4d3; grid-column: span 3; height: 100px; }
+
+        @media (max-width: 770px) {
+            .container {
+                grid-template-columns: 1fr 1fr;
+            }
+            .itemA, .itemG { grid-column: span 2; }
+            .itemB, .itemC, .itemD, .itemE, .itemF { grid-column: span 1; }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            .itemA, .itemB, .itemC, .itemD, .itemE, .itemF, .itemG { grid-column: span 1; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="item itemA">A</div>
+    <div class="item itemB">B</div>
+    <div class="item itemC">C</div>
+    <div class="item itemD">D</div>
+    <div class="item itemE">E</div>
+    <div class="item itemF">F</div>
+    <div class="item itemG">G</div>
+</div>
+
+</body>
+</html>
