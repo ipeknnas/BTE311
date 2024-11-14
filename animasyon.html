@@ -1,7 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animasyon</title>
+    <title>Animasyonlar</title>
     <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            gap: 40px;
+        }
+
+        .animated-div {
+            width: 100px;
+            height: 100px;
+        }
+
+        .up-down {
+            background-color: #ff9999;
+            animation: moveUpDown 2s infinite;
+        }
+        @keyframes moveUpDown {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(50px); }
+            100% { transform: translateY(0); }
+        }
+
+        .grow-shrink {
+            background-color: #66ccff;
+            animation: growShrinkColor 3s infinite;
+        }
+        @keyframes growShrinkColor {
+            0%, 100% { transform: scale(1); background-color: #66ccff; }
+            50% { transform: scale(1.5); background-color: #ffcc66; }
+        }
+
+        .fade-in-out {
+            background-color: #99cc99;
+            animation: fadeInOut 2s infinite;
+        }
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        .left-right {
+            background-color: #ffccff;
+            animation: moveLeftRight 2s infinite;
+        }
+        @keyframes moveLeftRight {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(50px); }
+            100% { transform: translateX(0); }
+        }
+
+        .rotate {
+            background-color: #ccccff;
+            animation: rotate360 2s infinite linear;
+        }
+        @keyframes rotate360 {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animated-div up-down"></div>
+        <div class="animated-div grow-shrink"></div>
+        <div class="animated-div fade-in-out"></div>
+        <div class="animated-div left-right"></div>
+        <div class="animated-div rotate"></div>
+    </div>
+</body>
+</html>

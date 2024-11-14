@@ -1,27 +1,84 @@
+<!-- Form1.html -->
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <body>
-        <h1 style="text-align: center;">Kayıt Formu</h1>
-        <head>
-            <title>Kayıt Formu</title>
-        </head>
-        <form action="submit_form.php" method="post">
-            <label for="fullname">Ad Soyad:</label>
-            <input type="text" id="fullname" name="fullname" required><br><br>
+    <title>Kayıt Formu</title>
     
-            <label for="email">E-posta:</label>
-            <input type="email" id="email" name="email" required><br><br>
-    
-            <label for="password">Şifre:</label>
-            <input type="password" id="password" name="password" required><br><br>
-    
-            <label for="birthdate">Doğum Tarihi:</label>
-            <input type="date" id="birthdate" name="birthdate"><br><br>
-    
-            <input type="submit" value="Kayıt">
-        </form>
-    </body>
-    </html>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #b0c4de;
+        }
+        
+        form {
+            width: 300px;
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            font-weight: 500;
+            background-color: #4682b4;
+            color: white;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5a9bd3;
+        }
+    </style>
+</head>
+<body>
+    <form action="submit_form.php" method="post">
+        <h2>Kayıt Formu</h2>
+        
+        <label for="fullname">Ad Soyad:</label>
+        <input type="text" id="fullname" name="fullname" required>
+
+        <label for="email">E-posta:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Şifre:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="birthdate">Doğum Tarihi:</label>
+        <input type="date" id="birthdate" name="birthdate">
+        
+        <input type="submit" value="Kayıt">
+    </form>
+</body>
+</html>
