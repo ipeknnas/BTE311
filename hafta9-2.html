@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10x10 Kareler</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+        const gridSize = 10;
+        const squareSize = canvas.width / gridSize;
+
+        for (let row = 0; row < gridSize; row++) {
+            for (let col = 0; col < gridSize; col++) {
+                ctx.fillStyle = `hsl(${Math.random() * 360}, 70%, 70%)`;
+                ctx.fillRect(col * squareSize, row * squareSize, squareSize, squareSize);
+                ctx.strokeRect(col * squareSize, row * squareSize, squareSize, squareSize);
+            }
+        }
+    </script>
+</body>
+</html>

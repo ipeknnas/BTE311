@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Deseni</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(8, 40px);
+            gap: 5px;
+            margin: 20px;
+        }
+        .circle {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container" id="grid"></div>
 
+    <script>
+        const gridContainer = document.getElementById("grid");
+
+        for (let i = 0; i < 8; i++) { 
+            for (let j = 0; j < 8; j++) { 
+                const circle = document.createElement("div");
+                circle.className = "circle";
+                const hue = 180 + (j * 20);
+                const lightness = 50 + (i * 3); 
+                circle.style.borderColor = `hsl(${hue}, 70%, ${lightness}%)`;
+
+                gridContainer.appendChild(circle);
+            }
+        }
+    </script>
+</body>
+</html>
