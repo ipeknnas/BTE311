@@ -12,11 +12,13 @@ $username = "root";
 $password = "";
 // Create connection
 $dbname = "BOTE2024";
-$conn = new mysqli($servername, $username, $password);
+
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
 die("Connection failed: " . $conn->connect_error);
 }
+
 // Create database
 $sql = "CREATE TABLE MyGuests (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
