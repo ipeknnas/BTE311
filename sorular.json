@@ -1,0 +1,114 @@
+{
+    "questions": [
+        {
+            "question": "JavaScript'te 'undefined' ile 'null' arasındaki fark nedir?",
+            "options": [
+                "A. 'undefined', bir değişkene değer atanmadığında oluşur, 'null' ise boş bir değeri ifade eder.",
+                "B. 'null' JavaScript'te kullanılmaz.",
+                "C. 'undefined' bir obje türüdür, 'null' ise bir veri türü değildir.",
+                "D. İkisi de aynı anlama gelir."
+            ],
+            "correctAnswer": "A",
+            "topic": "JavaScript"
+        },
+        {
+            "question": "CSS'de 'inline', 'block' ve 'inline-block' arasındaki farklar nedir?",
+            "options": [
+                "A. 'block' elemanlar her zaman yeni bir satırda başlar, 'inline' elemanlar mevcut satırda devam eder.",
+                "B. 'inline-block' elemanlar sadece metin için kullanılır.",
+                "C. 'block' elemanlar küçük cihazlarda kullanılamaz.",
+                "D. 'inline' ve 'block' arasında bir fark yoktur."
+            ],
+            "correctAnswer": "A",
+            "topic": "CSS"
+        },
+        {
+            "question": "JavaScript'te 'async' ve 'await' ne işe yarar?",
+            "options": [
+                "A. Asenkron işlemleri daha kolay yazmak ve anlamak için kullanılır.",
+                "B. JavaScript kodunun her zaman senkron çalışmasını sağlar.",
+                "C. Veri türlerini kontrol etmek için kullanılır.",
+                "D. Fonksiyonları yalnızca zamanlayıcı ile çalıştırır."
+            ],
+            "correctAnswer": "A",
+            "topic": "JavaScript"
+        },
+        {
+            "question": "HTML'deki 'meta' etiketlerinin işlevi nedir?",
+            "options": [
+                "A. Sayfanın metadata'sını belirtir.",
+                "B. Sayfanın stilini tanımlar.",
+                "C. Görsellerin optimize edilmesini sağlar.",
+                "D. Form elemanlarını doğrulamak için kullanılır."
+            ],
+            "correctAnswer": "A",
+            "topic": "HTML"
+        },
+        {
+            "question": "CSS'de 'media query' nedir ve ne işe yarar?",
+            "options": [
+                "A. Farklı cihazlar için farklı stiller uygulamak için kullanılır.",
+                "B. CSS'e animasyon eklemek için kullanılır.",
+                "C. Tarayıcıların cache'i temizlemesi için kullanılır.",
+                "D. JavaScript'teki fonksiyonları çağırmak için kullanılır."
+            ],
+            "correctAnswer": "A",
+            "topic": "CSS"
+        },
+        {
+            "question": "JavaScript'te 'spread' operatörü (...) ne işe yarar?",
+            "options": [
+                "A. Dizileri veya objeleri genişletmek için kullanılır.",
+                "B. Yalnızca string ifadeleri birleştirir.",
+                "C. Sadece sayıları toplamak için kullanılır.",
+                "D. Yeni bir veri türü oluşturur."
+            ],
+            "correctAnswer": "A",
+            "topic": "JavaScript"
+        },
+        {
+            "question": "HTML'deki 'input' elementinin 'type' özelliği hangi amaçlarla kullanılır?",
+            "options": [
+                "A. Kullanıcı giriş türünü belirlemek için kullanılır.",
+                "B. Sayfanın yüklenme hızını arttırır.",
+                "C. Sadece CSS ile bağlantılıdır.",
+                "D. Form verilerini sunucuya gönderir."
+            ],
+            "correctAnswer": "A",
+            "topic": "HTML"
+        },
+        {
+            "question": "CSS'de 'transition' özelliği ne işe yarar?",
+            "options": [
+                "A. Elemanlar arasındaki geçiş efektlerini belirler.",
+                "B. Sayfa boyutunu optimize eder.",
+                "C. Yalnızca JavaScript ile kullanılır.",
+                "D. Görsel içeriklerin yüklenmesini hızlandırır."
+            ],
+            "correctAnswer": "A",
+            "topic": "CSS"
+        },
+        {
+            "question": "JavaScript'te bir diziyi sıralamak için hangi yöntem kullanılır?",
+            "options": [
+                "A. Array.prototype.sort() yöntemi.",
+                "B. Array.prototype.map() yöntemi.",
+                "C. Array.prototype.reduce() yöntemi.",
+                "D. Array.prototype.filter() yöntemi."
+            ],
+            "correctAnswer": "A",
+            "topic": "JavaScript"
+        },
+        {
+            "question": "HTML'deki 'button' etiketi ne zaman kullanılır?",
+            "options": [
+                "A. Tıklanabilir bir buton oluşturmak için kullanılır.",
+                "B. CSS animasyonları eklemek için kullanılır.",
+                "C. Sadece form doğrulaması için kullanılır.",
+                "D. Sayfa içi yönlendirme yapmak için kullanılır."
+            ],
+            "correctAnswer": "A",
+            "topic": "HTML"
+        }
+    ]
+}
