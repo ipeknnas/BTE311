@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeri</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #a2bde8;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            max-width: 1200px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #ffffff;
+            padding: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            text-align: left;
+            transition: transform 0.3s, box-shadow 0.3s;
+            flex: 1 1 calc(33.33% - 16px);
+            border: 1px solid #ddd;
+            background: linear-gradient(to bottom right, #ffffff, #f7f7f7);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: #333333;
+            font-weight: bold;
+        }
+
+        .card button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #5f7aff;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #4c63d6;
+        }
+
+        @media (min-width: 576px) {
+            .card {
+                flex: 1 1 calc(50% - 16px);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .card {
+                flex: 1 1 calc(33.33% - 16px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Galeri</h1>
+
+    <div class="container">
+        <div class="card">
+            <img src="galeri/galeri1.jpg" alt="">
+            <h3></h3>
+            <button onclick="nextImage(this, 0)">Sonraki</button>
+        </div>
+        <div class="card">
+            <img src="galeri/galeri2.jpg" alt="">
+            <h3></h3>
+            <button onclick="nextImage(this, 1)">Sonraki</button>
+        </div>
+        <div class="card">
+            <img src="galeri/galeri3.jpg" alt="">
+            <h3></h3>
+            <button onclick="nextImage(this, 2)">Sonraki</button>
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            "galeri/galeri1.jpg",
+            "galeri/galeri2.jpg",
+            "galeri/galeri3.jpg",
+            "galeri/galeri4.jpg",
+            "galeri/galeri5.jpg",
+            "galeri/galeri6.jpg",
+            "galeri/galeri7.jpg",
+            "galeri/galeri8.jpg",
+            "galeri/galeri9.jpg"
+        ];
+
+        const titles = [
+            "don't panic",
+            "zaphod beeblebrox",
+            "princess leia",
+            "obi wan kenobi",
+            "ocean's 8",
+            "peni parker",
+            "cindy moon",
+            "fullmetal alchemist",
+            "edward"
+        ];
+
+        function getRandomIndex(excludeIndices) {
+            let index;
+            do {
+                index = Math.floor(Math.random() * images.length);
+            } while (excludeIndices.includes(index));
+            return index;
+        }
+
+        const indices = [
+            getRandomIndex([]),
+            getRandomIndex([]),
+            getRandomIndex([])
+        ];
+
+        function nextImage(button, cardIndex) {
+            const excludeIndices = [...indices];
+            indices[cardIndex] = getRandomIndex(excludeIndices);
+            const card = button.parentElement;
+            const img = card.querySelector('img');
+            const title = card.querySelector('h3');
+
+            img.src = images[indices[cardIndex]];
+            title.textContent = titles[indices[cardIndex]];
+        }
+
+        function changeBackgroundColor() {
+            const color = '#a2bde8';
+            document.body.style.background = color;
+        }
+
+        // Sayfa yüklendiğinde arka plan rengini değiştir
+        window.onload = changeBackgroundColor;
+    </script>
+
+</body>
+</html>
